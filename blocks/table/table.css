@@ -1,0 +1,83 @@
+
+/* General table styling */
+.table table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-s);
+}
+
+/* Table header styling */
+.table table thead tr {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+/* Table body row styling */
+.table table tbody tr {
+  border-bottom: none;
+  transition: background-color 0.2s;
+}
+
+/* Table cell styling */
+.table table th,
+.table table td {
+  padding: 8px 16px;
+  text-align: center; /* Align text to the center */
+  border-right: none; /* Remove vertical border */
+}
+
+/* Highlight row on hover */
+.table table tbody tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+/* Optional: Add striped effect for better readability */
+.table.striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Optional: Remove borders for a cleaner look */
+.table.bordered table th,
+.table.bordered table td {
+  border: none;
+}
+
+/* Country-specific styling */
+.countries table,
+th {
+  border-top: 1px solid black; /* Add top border */
+  border-bottom: 1px solid black; /* Add bottom border */
+  background-color: cornflowerblue;
+  padding: 0 1em;
+}
+
+.countries table,
+td {
+  border-top: 1px solid black; /* Add top border */
+  border-bottom: 1px solid black; /* Add bottom border */
+  background-color: rgb(237, 239, 243);
+  padding: 0 1em;
+}
+
+.countries .region-select>select {
+  width: 40%;
+  font-size: large;
+  background-color: cornflowerblue; /* Pale yellow background */
+  border: 2px solid #27ae60; /* Green border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Add some padding for spacing */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+  margin-bottom: 10px;
+  /* Hover effect */
+  &:hover {
+    background-color: #27ae60; /* Change background color on hover */
+    color: #fff; /* White text color on hover */
+  }
+}
+
+
+

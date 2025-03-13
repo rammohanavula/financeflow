@@ -1,0 +1,50 @@
+/* Base styles for the stock data container */
+.stock-data {
+    border: 1px solid var(--dark-color);
+    background-color: var(--light-background);
+    padding: 16px;
+    border-radius: 10px; /* Add rounded corners to the container */
+    margin: 16px 0;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+/* Add custom styles for better table appearance */
+.stock-data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Add gap between rows */
+}
+
+.stock-data-table th, .stock-data-table td {
+    border: 1px solid var(--dark-color);
+    padding: 12px;
+    text-align: center; /* Center-align text */
+}
+
+.stock-data-table th {
+    background-color: var(--dark-color);
+    color: var(--light-background);
+}
+
+.stock-data-table td {
+    background-color: var(--light-background);
+}
+
+.stock-data-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Style the stock price element */
+#stock-price {
+    font-size: 1.5em;
+    color: green;
+    margin: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .stock-data-table th, .stock-data-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

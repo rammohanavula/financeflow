@@ -1,0 +1,39 @@
+/* css for home page */
+.ccards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 16px;
+}
+
+.ccards > ul > li {
+  border: 1px solid var(--dark-color);
+  background-color: var(--background-color);
+  border-radius: 8px; /* Add rounded edges */
+  transition: box-shadow 0.3s; /* Add a smooth transition effect */
+}
+
+.ccards > ul > li:hover {
+  box-shadow: 0 15px 25px #808080; /* Add a subtle shadow on hover */
+}
+
+.ccards .cards-card-body {
+  margin: 16px;
+}
+
+.ccards .cards-card-image {
+  line-height: 0;
+}
+
+.ccards .cards-card-body > *:first-child {
+  margin-top: 0;
+}
+
+.ccards > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px; /* Add rounded edges to images */
+}

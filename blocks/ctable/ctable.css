@@ -1,0 +1,44 @@
+.ctable {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ctable table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-s);
+}
+
+.ctable table thead tr {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.ctable table tbody tr {
+  border-bottom: none;
+  transition: background-color 0.2s;
+}
+
+.ctable table th,
+.ctable table td {
+  padding: 8px 16px;
+  text-align: left; /* Align text to the left */
+}
+
+/* Highlight row on hover */
+.ctable table tbody tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+/* Optional: Add striped effect for better readability */
+.ctable.striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Optional: Remove borders for a cleaner look */
+.ctable.bordered table th,
+.ctable.bordered table td {
+  border: none;
+}

@@ -1,0 +1,22 @@
+footer {
+  padding: 2rem;
+  background-color: var(--light-color);
+  /* background-color: white; */
+  font-size: var(--body-font-size-s);
+}
+
+footer .footer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer .footer p {
+  margin: 0;
+}
+footer .footer a {
+  color: green;
+}
+img{
+  width : 100px;
+  height: 45px;
+}

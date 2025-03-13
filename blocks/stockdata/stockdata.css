@@ -1,0 +1,107 @@
+/* Base styles for the stock data container */
+.stockdata {
+    border: 1px solid var(--dark-color);
+    background-color: var(--light-background);
+    padding: 16px;
+    border-radius: 10px; /* Add rounded corners to the container */
+    margin: 16px 0;
+}
+
+/* Add custom styles for better table appearance */
+.stockdata-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Add gap between rows */
+}
+
+.stockdata-table th, .stockdata-table td {
+    border: 1px solid var(--dark-color);
+    padding: 12px;
+    text-align: center; /* Center-align text */
+}
+
+.stockdata-table th {
+    background-color: var(--dark-color);
+    color: var(--light-background);
+}
+
+.stockdata-table td {
+    background-color: var(--light-background);
+}
+
+.stockdata-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Style the stock price element */
+#stock-price {
+    font-size: 1.5em;
+    color: green;
+    margin: 10px 0;
+}
+
+/* Styles for the search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+#stock-search-input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+#stock-search-button {
+    padding: 8px 16px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark-color);
+    color: var(--light-background);
+    cursor: pointer;
+}
+
+#stock-search-button:hover {
+    background-color: var(--darker-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .stockdata-table th, .stockdata-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #stock-search-input {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    #stock-search-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .stockdata-table th, .stockdata-table td {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+
+    .search-container {
+        padding: 8px;
+    }
+
+    #stock-search-input, #stock-search-button {
+        font-size: 0.9em;
+    }
+}

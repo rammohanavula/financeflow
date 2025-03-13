@@ -1,0 +1,72 @@
+/* Enhanced Accordion Styles with Rounded Edges */
+
+/* Base styles for the accordion container */
+.accordion {
+  border: 1px solid var(--dark-color);
+  background-color: var(--light-background);
+  padding: 16px;
+  border-radius: 10px; /* Add rounded corners to the container */
+}
+
+/* Add spacing between adjacent accordion items */
+.accordion details + details {
+  margin-top: 16px;
+}
+
+/* Style the summary element (accordion header) */
+.accordion details summary {
+  position: relative;
+  padding: 0 16px;
+  padding-right: 48px;
+  cursor: pointer;
+  list-style: none;
+  overflow: auto;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  border-radius: 10px; /* Rounded corners for the summary */
+}
+
+/* Highlight the summary when hovered or focused */
+.accordion details summary:focus,
+.accordion details summary:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+/* Hide the default marker for the summary */
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add a custom arrow icon to the summary */
+.accordion details summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 9px;
+  height: 9px;
+  border: 2px solid;
+  border-width: 2px 2px 0 0;
+  transition: transform 0.2s;
+}
+
+/* Rotate the arrow when the accordion is open */
+.accordion details[open] summary::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Style the accordion item body (content) */
+.accordion details .accordion-item-body {
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 10px; /* Rounded corners for the content */
+}
+
+/* Apply styles to the open accordion item */
+.accordion details[open] .accordion-item-body {
+  border-top: 1px solid var(--dark-color);
+  background-color: var(--background-color);
+}
