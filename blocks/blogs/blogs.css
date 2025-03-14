@@ -5,33 +5,33 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px; /* Reduced gap */
 }
 
 .blogs > ul > li {
   border: 1px solid var(--dark-color);
   background-color: var(--background-color);
-  border-radius: 8px; /* Add rounded edges */
+  border-radius: 6px; /* Reduced border radius */
   transition: box-shadow 0.3s, transform 0.3s; /* Add transform transition */
-  flex: 1 1 calc(25% - 16px); /* Adjust the width to fit four items in a row */
-  max-width: calc(25% - 16px); /* Ensure the max width is also set */
+  flex: 1 1 calc(25% - 12px); /* Adjusted width */
+  max-width: calc(25% - 12px); /* Adjusted max width */
 }
 
 .blogs > ul > li:hover {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Use rgba for a more subtle shadow */
-  transform: translateY(-5px); /* Add a slight lift effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  transform: translateY(-4px); /* Reduced lift effect */
 }
 
 .blogs .blogs-card-body {
-  margin: 16px;
-  padding: 0 16px; /* Add padding for better spacing */
+  margin: 12px; /* Reduced margin */
+  padding: 0 12px; /* Reduced padding */
 }
 
 .blogs .blogs-card-image {
   line-height: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Ensure the border radius is applied */
+  border-radius: 6px; /* Reduced border radius */
 }
 
 .blogs .blogs-card-body > *:first-child {
@@ -43,7 +43,7 @@
   height: auto; /* Ensure images maintain their aspect ratio */
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 8px; /* Add rounded edges to images */
+  border-radius: 6px; /* Reduced border radius */
 }
 
 /* Additional styling */
@@ -56,13 +56,13 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-  border-radius: 8px; /* Match the image border radius */
+  border-radius: 6px; /* Reduced border radius */
   pointer-events: none; /* Ensure the overlay doesn't interfere with interactions */
 }
 
 .blogs .blogs-card-body h2 {
-  font-size: 1.5em;
-  margin-bottom: 8px;
+  font-size: 1.4em; /* Reduced font size */
+  margin-bottom: 6px; /* Reduced margin */
   color: var(--primary-color);
   display: -webkit-box;
   -webkit-line-clamp: 5; /* Limit to 5 lines */
@@ -72,9 +72,9 @@
 }
 
 .blogs .blogs-card-body p {
-  font-size: 1em;
+  font-size: 0.9em; /* Reduced font size */
   color: var(--secondary-color);
-  line-height: 1.5;
+  line-height: 1.4; /* Reduced line height */
   display: -webkit-box;
   -webkit-line-clamp: 5; /* Limit to 5 lines */
   -webkit-box-orient: vertical;
@@ -83,27 +83,50 @@
 }
 
 .blogs .blogs-card-body h5 {
-  font-size: 1em;
+  font-size: 0.9em; /* Reduced font size */
   color: var(--secondary-color);
-  line-height: 1.5;
+  line-height: 1.4; /* Reduced line height */
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Limit to 5 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis; /* Add ellipsis at the end */
 }
+
 .blogs .blogs-card-body .read-more {
   display: inline-block;
-  margin-top: 16px;
-  padding: 8px 16px;
+  margin-top: 12px; /* Reduced margin */
+  padding: 6px 12px; /* Reduced padding */
   background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 3px; /* Reduced border radius */
   transition: background-color 0.3s, transform 0.3s; /* Add transform transition */
 }
 
 .blogs .blogs-card-body .read-more:hover {
   background-color: var(--dark-primary-color);
   transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .blogs > ul > li {
+    flex: 1 1 calc(33.333% - 12px); /* Adjusted width */
+    max-width: calc(33.333% - 12px); /* Adjusted max width */
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs > ul > li {
+    flex: 1 1 calc(50% - 12px); /* Adjusted width */
+    max-width: calc(50% - 12px); /* Adjusted max width */
+  }
+}
+
+@media (max-width: 480px) {
+  .blogs > ul > li {
+    flex: 1 1 100%; /* Adjust to fit one item in a row */
+    max-width: 100%;
+  }
 }
